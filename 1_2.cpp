@@ -1,7 +1,7 @@
 #include<iostream>
 #include<vector>
 #include<algorithm>
-
+//1_2 beakjoon 1431
 using namespace std;
 int sum_of_num(string s1){
 	int sum1=0;
