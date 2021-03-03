@@ -19,11 +19,11 @@ bool comp(string s1, string s2){
 	else if(s1.size()== s2.size()){
 		if(sum_of_num(s1)<sum_of_num(s2))
 			return true;
-		else
+		else if(sum_of_num(s1)>sum_of_num(s2))
 			return false;
 	}
-	else
-		return s1<s2;
+	
+	return s1<s2;
 	
 }
 
