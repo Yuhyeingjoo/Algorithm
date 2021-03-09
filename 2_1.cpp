@@ -7,42 +7,12 @@
 using namespace std;
 
 vector<pair<int,int>> v;
-int stream = 0;
 int index= 0, num = 0,n=0;
 bool comp(pair<int,int> p1, pair<int,int> p2){
-	if(p1.second<p2.second)
-		return true;
+	if(p1.second=p2.second)
+		return p1.first<p2.first;
 	else
-		return false;
-}
-void check(){
-while(index<n){	
-	if(index==0){
-		stream = v[index].second;
-		num++;
-	//	cout<<v[index].first<<" "<<v[index].second<<endl;
-		index++;
-	}
-	else{
-		while(stream==v[index].second){
-//			cout<<stream<<" : "<<v[index].first<<" "<<index<<endl;
-			if(index<n&&v[index].first==stream){
-				num++;
-//				cout<<"same"<<endl;
-			}
-			index++;
-		}
-		if(v[index].first>=stream){
-			stream = v[index].second;
-			num++;
-		//	cout<<v[index].first<<" "<<v[index].second<<endl;
-			index++;
-		}
-		else
-			index++;
-
-	}
-}
+		return p1.second<p2.second;
 }
 int main(){
 	int s,f;
@@ -53,8 +23,14 @@ int main(){
 		pair<int,int> p = make_pair(s,f);
 		v.push_back(p);
 	}
+	int now = 0;
 	sort(v.begin(),v.end(),comp);
-		check();
+	for(int i=0; i<n; i++){
+		if(v[i].first>=now){
+			now = v[i].second ;
+			num++;
+		}
+	}
 	cout<<num<<endl;
 	
 }
