@@ -15,7 +15,7 @@ bool comp(pair<int,int> p1, pair<int,int> p2){
 	else
 		return false;
 }
-int check(){
+void check(){
 while(index<n){	
 	if(index==0){
 		stream = v[index].second;
