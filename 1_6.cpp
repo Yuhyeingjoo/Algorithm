@@ -24,6 +24,7 @@ void dfs(int s){
 			return;
 		}
 	for(int i = 1 ;  i <=n; i++){
+		cout<<i<<": "<<visit[i]<<" pre:"<<pre[s]<<" v[]"<<v[i-1]<<endl;
 		if(!visit[i]&& pre[s]!=v[i-1]){
 			pre[s] = v[i-1];
 			visit[i] = true;
