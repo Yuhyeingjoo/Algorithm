@@ -25,9 +25,12 @@ while(index<n){
 	}
 	else{
 		while(stream==v[index].second){
-			index++;
-			if(index<n&&v[index].first==stream)
+//			cout<<stream<<" : "<<v[index].first<<" "<<index<<endl;
+			if(index<n&&v[index].first==stream){
 				num++;
+//				cout<<"same"<<endl;
+			}
+			index++;
 		}
 		if(v[index].first>=stream){
 			stream = v[index].second;
