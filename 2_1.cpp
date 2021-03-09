@@ -26,6 +26,8 @@ while(index<n){
 	else{
 		while(stream==v[index].second){
 			index++;
+			if(index<n&&v[index].first==stream)
+				num++;
 		}
 		if(v[index].first>=stream){
 			stream = v[index].second;
